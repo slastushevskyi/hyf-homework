@@ -3,7 +3,11 @@ body {
     margin: 0;
     width: 100%;  
 }
+
+
 /* Header + menu */
+
+
 .header {
     display: flex;
     flex-direction: column;
@@ -12,15 +16,12 @@ body {
     background-color: rgb(250, 248, 248);
     min-height: 170px;
     max-height: 250px;
-    
 }
 h1 {
-    /* margin-top: 10px; */
     font-size: 36px;
     margin-left: 200px;
     text-transform: uppercase;
     font-weight: 800;
-    
 }
 .header p {
     margin-left: 205px;
@@ -40,7 +41,6 @@ h1 {
     border-right: 0px;
     display: flex;
     align-items: center;
-    
 }
 .menu-list {
     margin-left: 160px;
@@ -50,7 +50,6 @@ h1 {
     justify-content: space-around; 
     flex-wrap: wrap; 
 }
-
 .menu-button {
     margin-right: 30px;
     text-decoration: none;
@@ -61,36 +60,28 @@ h1 {
 .menu-button:hover {
     color: grey;
 }
+
+
 /* Main */
+
+
 .main-img {
-    /* height: 704px; */
-    width: 100%;
-    
+    width: 100%; 
 }
 .info {
     display: flex;
-    /* flex-direction: row; */
-    /* width: 100%; */
     min-height: 100vh;
-    /* margin-left: 200px; */
-    /* margin-left: 200px; */
-    /* justify-content: space-evenly;*/
     align-items: baseline; 
     flex-wrap: wrap;
     justify-content: center;
-
 }
 .webdev-ind {
- 
-    width: 425px;
+    max-width: 425px;
     height: 610px;
-    align-items: space-around;
     margin-left: 50px;
     margin-right: 50px;
     margin-top: 25px;
     margin-bottom: 25px;
-    /* flex-wrap: wrap; */
-
 }
 h2 {
     font-size: 21px;
@@ -101,18 +92,16 @@ h2 {
     font-size: 14px;
     color: rgb(114, 110, 106);
     font-weight: 500;
+    width: 425px;
 }
-.webdev-partic {
-    
+.webdev-partic { 
     width: 600px;
-    height: 610px;
+    min-height: 610px;
     align-items: space-around;
     margin-left: 50px;
     margin-right: 50px;
     margin-top: 25px;
     margin-bottom: 25px;
-    /* flex-wrap: wrap; */
-
 }
 h3 {
     font-size: 30px;
@@ -128,25 +117,36 @@ h3 {
 .gallery {
     margin-top: 25px;
     margin-bottom: 25px;
-    width: 425px;
-    height: 500px;
+    max-width: 425px;
+    max-height: 30%;
     margin-left: 50px;
     margin-right: 50px;
-    /* flex-wrap: wrap; */
-
 }
 .gallery p {
     font-size: 14px;
     color: rgb(114, 110, 106);
     font-weight: 400;
+    max-width: 425px;
 }
+.gallery-list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    align-items:center;
+    padding-inline-start: 0px;
+}
+.gallery-img {
+    margin-top: 30px;
+    margin-right: 15px;
+    max-width: 185px;  
+}  
 .logos-web {
     margin-left: 50px;
     margin-right: 50px;
     margin-top: 25px;
     margin-bottom: 25px;
     width: 600px;
-    height: 500px;
+    min-height: 200px;
 }
 .logo-list {
     display: flex;
@@ -158,23 +158,25 @@ h3 {
 }
 .icon {
     margin-right: 22px;
+    margin-top: 60px;
     height: 128px;
 }
+
+
 /* Footer */
+
 
 footer {
     display: flex;
     background-color:rgb(102 53 204);
     color: white;
     justify-content: space-evenly;
-
 }
 footer ul {
     list-style-type: none;
     width: 200px;
     padding-inline-start:20px;
 }
-
 .list-head {
     margin-top: 50px;
     margin-bottom: 20px;
@@ -225,13 +227,235 @@ iframe {
     border-style: none;
 }
 .foot-butn_margin {
-    /* padding-top: 15px; */
     margin-top: 10px;
     margin-bottom: 10px;
-     /* width: 300px;  */
-    /* border-top: 1px solid rgb(235, 235, 235);  */
 }
-/* footer ul {
-    display: flex;
-    justify-content: space-evenly;
-} */
+
+
+/* Media query rule for screens and devices less then 700px */
+
+
+@media screen and (max-width:700px) {
+
+    
+    body {
+        max-width: 100%;
+
+     
+        padding: 0px;
+        display: inline-block;
+    }
+    .header {
+        min-height: 10px;
+        max-height: 150px;
+    }
+    h1 {
+        font-size: 16px;
+        margin-left: 20px;
+    }
+    .header p {
+        margin-left: 20px;
+        margin-top: -17px;
+        font-size: 8px;
+    }
+    .menu {
+        margin-left: 0px;
+        max-width: 100%;
+        min-height: 50px;
+        max-height: 200px;
+        height: 70px;
+    }
+    .menu-list {
+        margin-left: 20px; 
+        flex-direction: column;
+        padding-inline-start: 0px;
+        margin-block-end: 0px;
+        margin-block-start: 0px;
+        height: 70px;
+    }
+    .menu-list li {
+        height: 15px;
+        display: flex;
+        align-items: center;
+    }
+    .menu-button {
+        text-decoration: none;
+        color: black;
+        font-weight: 700;
+        font-size: 10px;
+    }
+    .webdev-ind {
+        display: inline-block;
+        max-width: 90%;
+        max-height: 125px;
+        margin: 0px;
+    }
+    h2 {
+        text-align:left;
+        font-size: 14px;
+    }
+    .webdev-ind p  {
+        margin-top: -10px;
+        font-size: 10px;
+        max-width: 100%;
+    }
+    .webdev-partic { 
+        display: inline-block;
+        max-width: 90%;
+        min-height: 100px;
+        margin: 0px;
+    }
+    h3 {
+        font-size: 14px;
+    }
+    .webdev-partic p {
+        margin-top: -10px;
+        font-size: 10px;
+        width: 100%;
+    }
+    .gallery {
+        display: inline-block;
+        width: 90%;
+        margin: 0px;
+        max-height: 30%;
+    }
+    .gallery p {
+        margin-top: -10px;
+        font-size: 10px;
+        width: 100%;
+    }
+    .gallery-list {
+        justify-content: space-evenly;
+        margin-block-start: 0px;
+        margin-block-end: 0px;
+    }
+    .gallery-img {
+        margin-right: 5px;
+        margin-bottom: 5px;
+        margin-top: 0px;
+        max-width: 105px;
+        max-height: 90px;
+    }
+    .logos-web {
+        display: inline-block;
+        width: 90%;
+        margin: 0px;
+        max-height: 275px;
+    }
+    .logo-list {
+        max-height: 400px;
+        width: 100%;
+        list-style-type: none;
+        justify-content:space-between;
+    }
+    .icon {
+        margin-right: 10px;
+        max-height: 65px;
+        margin-top: 0px ;
+    }
+    footer {
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: space-around;
+        padding-bottom: 10px;
+    }
+    footer ul {
+        max-width: 100%;
+        margin: 0px;
+        padding-inline-start:0px;
+        margin-inline-start: 20px;
+        margin-inline-end: 20px;
+    }
+    .list-head {
+        display: block;
+        margin-top: 10px;
+        margin-bottom: 7px;
+        font-size: 18px;
+    }
+    .place {
+        display: block;
+        font-size: 14px;
+    }
+    .foot-text {
+        font-size: 12px;
+    }
+    .foot-butn {
+        display: inline-block;
+        padding-top: 3px; 
+        padding-bottom: 5px; 
+        width: 150px;
+        font-size: 16px;
+    }
+    .foot-butn_noborder {
+        border: none;
+        display: inline-block;
+        padding-top: 3px;
+        padding-bottom: 5px;  
+        width: 150px;
+        font-size: 16px;
+    }
+    .foot-butn:hover {
+        margin-left: 15px;
+    }
+    .foot-butn_noborder:hover {
+        margin-left: 15px;
+    }
+    iframe {
+        width: 300px;
+        height: 200px;
+        border-style: none;
+    }
+    .foot-butn_margin {
+        margin: 0px;
+    }
+    .site-nav {
+        display: none;
+    }
+}
+
+
+/* Media query rule for screens and devices less then 280px */
+
+
+@media screen and (max-width: 280px) {
+    iframe {
+        width: 200px;
+    }
+    .logos-web {
+        max-height: 350px;
+    }
+    .webdev-ind {
+        max-height: 165px;
+    }
+}
+
+/* Media query rule for screens and devices with screens 
+between 700px and 1024px */
+
+
+@media screen and (min-width:700px) and (max-width: 1024px) {
+    
+    .webdev-ind {
+        height: 150px;
+        max-width: 600px;  
+    }
+    .webdev-ind p {
+        width: 610px;
+    }
+    .gallery {
+        max-width: 600px;
+    }
+    .icon {
+        height: 70px;
+    }
+    h1 {
+        max-width: 600px;
+        margin-left: 140px;
+    }
+    .header p {
+        margin-left: 145px;
+    }
+    .menu-list {
+        margin-left: 105px;
+    }
+}
