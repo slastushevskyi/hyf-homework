@@ -75,7 +75,7 @@ h1 {
     margin-left: 10%;
     margin-right:10%;
     display: flex;
-    min-height: 100vh;
+    min-height: 10%;
     align-items: baseline; 
     flex-wrap: wrap;
     justify-content: center;
@@ -237,7 +237,7 @@ iframe {
 }
 
 
-/* Media query rule for screens and devices less then 700px */
+/* Media query rule for screens and devices less than 700px */
 
 
 @media screen and (max-width:539px) {
@@ -245,8 +245,6 @@ iframe {
     
     body {
         max-width: 100%;
-
-     
         padding: 0px;
         display: inline-block;
     }
@@ -509,10 +507,10 @@ between 700px and 1024px */
 
 
 /* Media query rule for screens and devices with screens 
-between 1001px and 1530px */
+between 1001px and 1400px */
 
 
-@media screen and (min-width: 1001px) and (max-width: 1530px) {
+@media screen and (min-width: 1001px) and (max-width: 1400px) {
     .webdev-ind {
         height: 160px;
     }
@@ -534,12 +532,39 @@ between 1001px and 1530px */
 }
 
 
-/* Media query rule for screens and devices wider than 2185px */
+/* Media query rule for screens and devices with screens 
+between 1401px and 1749px */
 
 
-@media screen and (min-width: 2185px) {
+@media screen and (min-width: 1401px) and (max-width: 1749px) {
+    .info {
+    margin: 0px;
+    min-height: 10%;
+    }
+    h1 {
+        margin-left: 12%;
+        margin-right: 12%;
+    }
+    .header p {
+        margin-left: 12%;
+        margin-right: 12%;
+    }
+    .menu-list {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    footer {
+        padding-left: 50px;
+    }
+}
+
+/* Media query rule for screens and devices wider than 2187px */
+
+
+@media screen and (min-width: 2187px) {
     .info {
         margin-left: 20%;
         margin-right: 20%;
     } 
 }
+
