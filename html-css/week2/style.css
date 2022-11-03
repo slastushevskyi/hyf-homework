@@ -237,7 +237,7 @@ iframe {
 }
 
 
-/* Media query rule for screens and devices less than 700px */
+/* Media query rule for screens and devices less than 539px */
 
 
 @media screen and (max-width:539px) {
@@ -429,6 +429,7 @@ iframe {
     }
     iframe {
         width: 200px;
+        max-width: 100%;
     }
     .logos-web {
         max-height: 350px;
@@ -442,7 +443,7 @@ iframe {
 between 700px and 1024px */
 
 
-@media screen and (min-width: 540px) and (max-width: 1000px) {
+@media screen and (min-width: 540px) and (max-width: 1224px) {
     .info {
         margin-left: 10%;
         margin-right: 10%;
@@ -510,7 +511,7 @@ between 700px and 1024px */
 between 1001px and 1400px */
 
 
-@media screen and (min-width: 1001px) and (max-width: 1400px) {
+@media screen and (min-width: 1001px) and (max-width: 1224px) {
     .webdev-ind {
         height: 160px;
     }
@@ -533,10 +534,10 @@ between 1001px and 1400px */
 
 
 /* Media query rule for screens and devices with screens 
-between 1401px and 1749px */
+between 1225px and 1749px */
 
 
-@media screen and (min-width: 1401px) and (max-width: 1749px) {
+@media screen and (min-width: 1225px) and (max-width: 1749px) {
     .info {
     margin: 0px;
     min-height: 10%;
