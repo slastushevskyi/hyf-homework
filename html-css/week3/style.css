@@ -1,0 +1,528 @@
+body {
+    max-width: 100%;
+    font-family: 'Open sans', sans-serif;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+header,
+main {
+    width: 1000px;
+    max-width: 100%;
+}
+/* -------------- NAVIGATION MENU ------------- */
+nav {
+    float: right;
+    max-width: 100%;
+    width: 550px;
+}
+nav ul {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;  
+    width: 500px;  
+    margin: 0;    
+}
+nav ul li {
+    margin: 10px;
+    min-width: 50px;
+    height: 25px;
+    font-size: 20px;
+    font-weight: bold;
+}
+nav ul li a {
+    padding: 5px;
+    text-decoration: none;
+    color: #35302f;
+    border: 2px solid rgba(255, 255, 255, 0.459);
+}
+nav ul li a:hover {
+    border: 2px solid rgba(0, 0, 255, 0.459);
+    border-radius: 50px;
+    box-shadow: 1px;
+    background-color: rgba(0, 0, 255, 0.158);
+}
+h1 {
+    max-width: 700px;
+}
+/* ----------- TABS -------------- */
+.tabs {
+    margin: 0px 0px -3px 0px;
+}
+.tabs_items {
+    display: flex;
+}
+.tab_item {
+    flex: 0 1 33.333%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 700;
+    color: #000000;
+    background: rgb(255, 255, 255); /* Цвет фона */
+    padding: 5px 10px; /* Поля вокруг текста */
+    border: 1px solid #666; /* Параметры рамки */
+    border-bottom: none; /* Снизу линию убираем */
+}
+#step-1, 
+#step-2, 
+#step-3, 
+#step-4 {
+    display: none;
+}
+#step-1:target,
+#step-2:target,
+#step-3:target,
+#step-4:target {
+    display: block;
+    /* position: absolute; Абсолютное позиционирование */
+    border: 1px solid #666; /* Параметры рамки */
+    padding: 10px; /* Поля вокруг текста */
+    margin-top: 82px;
+    margin-bottom: 30px;
+}
+.p-head {
+    width: 700px;
+    padding-top: 30px;
+}
+.p-head2 {
+    width: 700px;
+}
+/* --------- PROGRESS BAR --------- */
+.progress {
+    width: 215px;
+    height: 30px;
+    background-color: rgba(0, 0, 255, 0.459);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.fill-1 {
+    display:inline-block;
+    width: 47px;
+    height: 70%;
+    background-color:#0e006b;
+    border: 1px solid rgba(0, 0, 255, 0.900);
+    border-radius: 5px 0px 0px 5px;
+    z-index: 10;
+}
+.fill-2,
+.fill-3 {
+    width: 48px;
+    height: 70%;
+    display:inline-block;
+    border: 1px solid rgba(0, 0, 255, 0.900);
+}
+.fill-2-filled,
+.fill-3-filled {
+    display: inline-block;
+    width: 48px;
+    height: 70%;
+    display:inline-block;
+    border: 1px solid rgba(0, 0, 255, 0.900);
+    background-color:#0e006b;
+    z-index: 10;
+}
+.fill-4 {
+    height: 70%;
+    width: 48px;
+    display:inline-block;
+    border: 1px solid rgba(0, 0, 255, 0.900);
+    border-radius: 0px 5px 5px 0px;
+}
+.fill-4-filled {
+    height: 70%;
+    width: 48px;
+    display:inline-block;
+    border: 1px solid rgba(0, 0, 255, 0.900);
+    border-radius: 0px 5px 5px 0px;
+    background-color:#0e006b;
+    z-index: 10;
+}
+/* .progress_fill {
+    width: 25%;
+    height: 100%;
+    background-color:rgba(0, 0, 255, 0.459);
+} */
+
+/* ----------------- STEP 1 --------------------- */
+
+.step_block {
+    width: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.cntry {
+    width: 1000px;
+}
+.fst-name,
+.lst-name,
+.strt-name,
+.zip-code {
+    width: 500px;
+}
+.prof-descr {
+    width: 1000px;
+    margin-top: 25px;
+}
+.ship-adr {
+    width: 970px;
+    margin-bottom: 10px;
+}
+.unchecked {
+    margin-top: 20px;
+    width: 500px;
+    height: 340px;
+    border: 2px solid rgb(194, 180, 180);
+    transition: 0.8s;
+    padding-top: 10px;
+}
+#check_label {
+    font-size: 20px;
+    font-weight: 600;
+}
+#check_label:checked ~ .unchecked {
+    height: 0px;
+    opacity: 0;
+}
+#button1 {
+    position: relative;
+    left: 820px;
+    /* bottom: 50px; */
+    width: 150px;
+    height: 50px;
+    font-size: 20px;
+    font-weight: 600;
+}
+#name,
+#surname,
+#street,
+#zip,
+#name_extra,
+#surname_extra,
+#street_extra,
+#zip_extra {
+    width: 250px;
+    height: 50px;
+    border: 2px solid rgb(194, 180, 180);
+    margin-right: 10px;
+    margin-left: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    padding-left: 10px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+#country,
+#country_extra {
+    width: 230px;
+    height: 55px;
+    border: 2px solid rgb(194, 180, 180);
+    margin-right: 10px;
+    margin-left: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    padding-left: 10px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+#user_decription {
+    width: 750px;
+    height: 150px;
+    border: 2px solid rgb(194, 180, 180);
+    margin-right: 10px;
+    margin-left: 5px;
+    font-size: 16px;
+    font-weight: 500;
+    padding-left: 10px;
+}
+.p-style {
+    width: 200px;
+    font-size: 20px;
+    font-weight: 600;
+    display: inline-block;
+    text-align: right;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.p-style2 {
+    width: 1000px;
+}
+.p-style_prof-descr {
+    position: relative;
+    bottom: 30px;
+    width: 200px;
+    font-size: 20px;
+    font-weight: 600;
+    display: inline-block;
+    text-align: right;
+    height: 158px;
+}
+.p-style3 {
+    position: relative;
+    top: 15px;
+    margin-top: 25px;
+    text-align: left;
+    width: 175px;
+    font-size: 14px;
+    font-weight: 300;
+    font-style: italic;
+    display: inline-block;
+}
+.p-style4 {
+    width: 1000px;
+    font-size: 25px;
+    font-weight: 800;
+    display: block;
+    text-align: center;
+}
+.p-style5 {
+    width: 1000px;
+    font-size: 20px;
+    font-weight: 600;
+    display: block;
+    text-align: center;
+}
+/* --------------Step 2 ------------------ */
+.mail,
+.mobile {
+    width: 500px;
+}
+.password1,
+.password2 {
+    width: 1000px;
+}
+#email,
+#phone {
+    width: 250px;
+    height: 50px;
+    border: 2px solid rgb(194, 180, 180);
+    margin-right: 10px;
+    margin-left: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+#password-1,
+#password-2 {
+    width: 250px;
+    height: 50px;
+    border: 2px solid rgb(194, 180, 180);
+    margin-right: 10px;
+    margin-left: 5px;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+#card_type, 
+#card_number,
+#card_user {
+    width: 230px;
+    height: 55px;
+    border: 2px solid rgb(194, 180, 180);
+    margin-right: 10px;
+    margin-left: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+#card_month,
+#card_year {
+    width: 100px;
+    height: 55px;
+    border: 2px solid rgb(194, 180, 180);
+    margin-right: 10px;
+    margin-left: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+#card_ccv {
+    width: 85px;
+    height: 45px;
+    border: 2px solid rgb(194, 180, 180);
+    margin-right: 10px;
+    margin-left: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+.c_type,
+.c_number {
+    width: 500px;
+}
+.c_month,
+.c_year,
+.c_ccv {
+    width: 1000px;
+}
+.news-update {
+    margin-bottom: 50px;
+}
+#button2 {
+    position: relative;
+    left: 64px;
+    top: 90px;
+    width: 150px;
+    height: 50px;
+    font-size: 20px;
+    font-weight: 600; 
+}
+#button2-1 {
+    position: relative;
+    left: 10px;
+    top: 40px;
+    width: 150px;
+    height: 50px;
+    font-size: 20px;
+    font-weight: 600;
+}
+#weekly { 
+    margin-right: 70px;
+}
+   /* --------------- STEP 3 ------------------- */
+.item-type {
+    width: 500px;
+}
+.lab-img {
+    margin-top: 50px;
+    width: 200px;
+    border: 1px solid rgb(194, 180, 180);
+}
+#item-1, 
+#item-2, 
+#item-3, 
+#item-4, 
+#item-5, 
+#item-6, 
+#item-7, 
+#item-8  {
+    position: relative;
+    right: 22px;
+    top: 15px;
+}
+#button3 {
+    position: relative;
+    left: 818px;
+    bottom: 10px;
+    width: 150px;
+    height: 50px;
+    font-size: 20px;
+    font-weight: 600; 
+}
+#button3-1 {
+    position: relative;
+    right: 140px;
+    bottom: 10px;
+    width: 150px;
+    height: 50px;
+    font-size: 20px;
+    font-weight: 600;
+}
+.need-accept {
+    margin-top: 75px;
+    margin-bottom: 70px;
+    width: 1000px;
+
+}
+ /*------------ STEP 4 ------------*/
+.succ-img {
+    margin: 50px 0px 50px 0px;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    width: 1000px;
+}
+
+
+
+
+
+
+
+
+
+
+/* label .p-style {
+    width: 300px;
+} */
+
+/* .progress-bar {
+    background-color: #1a1a1a;
+    height: 25px;
+    padding: 5px;
+    width: 350px;
+    margin: 50px 0;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    -moz-box-shadow: 0 1px 5px #000 inset, 0 1px 0 #444;
+    -webkit-box-shadow: 0 1px 5px #000 inset, 0 1px 0 #444;
+    box-shadow: 0 1px 5px #000 inset, 0 1px 0 #444;
+   }
+   
+   .progress-bar span {
+    display: inline-block;
+    height: 25px;
+    width: 200px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, .5) inset;
+    -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, .5) inset;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, .5) inset;
+    -webkit-transition: width .4s ease-in-out;
+    -moz-transition: width .4s ease-in-out;
+    -ms-transition: width .4s ease-in-out;
+    -o-transition: width .4s ease-in-out;
+    transition: width .4s ease-in-out;
+   } 
+   .blue span {
+    background-color: #34c2e3;
+   }
+   .stripes span {
+    -webkit-background-size: 30px 30px;
+    -moz-background-size: 30px 30px;
+    background-size: 30px 30px;
+    background-image: -webkit-gradient(linear, left top, right bottom,
+    color-stop(.25, rgba(255, 255, 255, .15)), color-stop(.25, transparent),
+    color-stop(.5, transparent), color-stop(.5, rgba(255, 255, 255, .15)),
+    color-stop(.75, rgba(255, 255, 255, .15)), color-stop(.75, transparent),
+    to(transparent));
+    background-image: -webkit-linear-gradient(135deg, rgba(255, 255, 255, .15) 25%, transparent 25%,
+    transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%,
+    transparent 75%, transparent);
+    background-image: -moz-linear-gradient(135deg, rgba(255, 255, 255, .15) 25%, transparent 25%,
+    transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%,
+    transparent 75%, transparent);
+    background-image: -ms-linear-gradient(135deg, rgba(255, 255, 255, .15) 25%, transparent 25%,
+    transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%,
+    transparent 75%, transparent);
+    background-image: -o-linear-gradient(135deg, rgba(255, 255, 255, .15) 25%, transparent 25%,
+    transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%,
+    transparent 75%, transparent);
+    background-image: linear-gradient(135deg, rgba(255, 255, 255, .15) 25%, transparent 25%,
+    transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%,
+    transparent 75%, transparent);           
+   
+    -webkit-animation: animate-stripes 3s linear infinite;
+    -moz-animation: animate-stripes 3s linear infinite;
+   }
+   
+   @-webkit-keyframes animate-stripes {
+    0% {background-position: 0 0;} 100% {background-position: 60px 0;}
+   }
+   
+   @-moz-keyframes animate-stripes {
+    0% {background-position: 0 0;} 100% {background-position: 60px 0;}
+   } */
