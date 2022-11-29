@@ -8,7 +8,7 @@ const petersHousePrice = petersVolumeInMeters * 2.5 * 1000 + gardenSizeInM2 * 30
 if (petersHousePrice >= 2500000) {
     console.log("Peter not going to pay extra money");
 }
-else if (petersHousePrice < 2500000) {
+else (petersHousePrice < 2500000) {
     console.log("Peter gonna pay to much");
 }
 //  Julia's house
@@ -21,6 +21,6 @@ const juliasHousePrice = juliasVolumeInMeters * 2.5 * 1000 + gardenSizeInM2 * 30
 if (juliasHousePrice >= 1000000) {
     console.log("Julia not going to pay extra money");
 }
-else if (juliasHousePrice < 1000000) {
+else (juliasHousePrice < 1000000) {
     console.log("Julia gonna pay to much");
 }
