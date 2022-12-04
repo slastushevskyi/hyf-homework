@@ -6,7 +6,6 @@ let toffee = "toffee";
 let chewingGum = "chewingGum";
 const amountToSpend = Math.random() * 100; 
 function addCandy(candyType,weight) {
-
     if (candyType === "sweet") { 
         boughtCandyPrices.push(weight * 0.5);       
     }
