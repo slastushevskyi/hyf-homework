@@ -44,33 +44,12 @@ activities.push({date:"11/8/2022", activity:"Solving troubles", duration:60});
 activities.push({date:"10/8/2022", activity:"Reading doc-tion", duration:160});
 showStatus(activities, "11/8/2022");
 
-// I know, this method is BULLSHIT, but i can't get how to do it right.
-
-// function calcActivicties(array) {
-//         if (array[0].duration > array[1].duration) {
-//             if (array[0].duration > array[2].duration) {
-//             console.log(array[0])
-//             }
-//         }
-//         else if (array[0].duration > array[2].duration) {
-//             if (array[0].duration > array[1].duration)
-//             console.log(array[0])
-//         }
-//         else if (array[1].duration > array[0].duration) {
-//             if (array[1].duration > array[2].duration)
-//             console.log(array[1])
-//         }
-//         else if (array[1].duration > array[2].duration) {
-//             if (array[1].duration > array[0].duration)
-//             console.log(array[1])
-//         }
-//         else if (array[2].duration > array[0].duration) {
-//             if (array[2].duration > array[1].duration)
-//             console.log(array[1])
-//         }
-//         else if (array[2].duration > array[1].duration) {
-//             if (array[2].duration > array[0].duration)
-//             console.log(array[1])
-//         }
-// }
-// calcActivicties(activities);
+function calcActivities(array) {
+const allDurations = array.map(object => {
+    return object.duration;
+});
+console.log(allDurations);
+const maxActivity = Math.max(...allDurations);
+console.log(maxActivity); 
+}
+calcActivities(activities);
