@@ -27,7 +27,6 @@
         "Running Cat",
         "Sneaky Mouse"];
         const randomSpirit = spiritAnimals[Math.floor(Math.random() * spiritAnimals.length)];
-        const anotherRandomSpirit = spiritAnimals[Math.floor(Math.random() * spiritAnimals.length)];
         const spiritRoll = spiritAnimals[Math.floor(Math.random() * spiritAnimals.length)];
         let spiritOutput;
         let anotherSpiritOutput;
@@ -44,6 +43,7 @@
         }
         document.querySelector('.getNewName').onclick = mySecondClick;
         function mySecondClick() {
+            const anotherRandomSpirit = spiritAnimals[Math.floor(Math.random() * spiritAnimals.length)];
             let userName = document.querySelector('input').value;
             if (userName !== "") {
                 anotherSpiritOutput = `${userName} - ${anotherRandomSpirit}`;
